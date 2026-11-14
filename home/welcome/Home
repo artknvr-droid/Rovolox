@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rovolox - Home</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef1f8;
+  color: #202943;
+}
+header {
+  height: 65px;
+  background: #202b4b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+.logo { font-size: 27px; font-weight: 900; color: #a99aff; }
+header a { color: white; text-decoration: none; }
+.layout { display: flex; min-height: calc(100vh - 65px); }
+aside {
+  width: 230px;
+  background: white;
+  padding: 20px 12px;
+  border-right: 1px solid #dce1ed;
+}
+.user {
+  padding: 15px 10px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: bold;
+}
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #7661e8;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+}
+nav a {
+  display: block;
+  padding: 13px;
+  margin: 4px 0;
+  color: #39445e;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+nav a:hover, nav a.active {
+  background: #eeeaff;
+  color: #6854dc;
+}
+main { flex: 1; padding: 35px; max-width: 1100px; }
+h1 { font-size: 32px; }
+.welcome {
+  background: linear-gradient(120deg,#30275f,#7560e9);
+  color: white;
+  padding: 35px;
+  border-radius: 16px;
+}
+.welcome p { color: #e1ddff; }
+button {
+  border: 0;
+  padding: 13px 22px;
+  background: white;
+  color: #5946ca;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+  gap: 17px;
+  margin-top: 25px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 2px 8px #17254a0c;
+}
+.card a { color: #6854dc; font-weight: bold; text-decoration: none; }
+footer { text-align: center; padding: 25px; color: #8490a8; }
+@media(max-width:650px) {
+  .layout { display: block; }
+  aside { width: 100%; }
+  nav { display: grid; grid-template-columns: 1fr 1fr; }
+  main { padding: 18px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">ROVOLOX</div>
+  <a href="../welcome/">Log out</a>
+</header>
+
+<div class="layout">
+<aside>
+  <div class="user">
+    <div class="avatar">A</div>
+    <span>ArtKnv<br><small>My Account</small></span>
+  </div>
+  <nav>
+    <a class="active" href="./">⌂ Home</a>
+    <a href="#profile">👤 Profile</a>
+    <a href="#plus">⭐ Rovolox Plus</a>
+    <a href="#messages">✉ Messages</a>
+    <a href="#friends">👥 Friends</a>
+    <a href="#avatar">🎭 Avatar</a>
+    <a href="#inventory">🎒 Inventory</a>
+    <a href="#trade">🔄 Trade</a>
+    <a href="#communities">🌐 Communities</a>
+    <a href="#donate">💎 Donate & Rewards</a>
+  </nav>
+</aside>
+
+<main>
+  <h1>Home</h1>
+  <section class="welcome">
+    <h2>Welcome to Rovolox!</h2>
+    <p>Play, create, explore and hang out with your friends.</p>
+    <button onclick="window.open('https://www.roblox.com/games','_blank')">
+      ▶ Discover Games
+    </button>
+  </section>
+
+  <h2>Explore Rovolox</h2>
+  <div class="cards">
+    <div class="card" id="profile">
+      <h3>👤 My Profile</h3>
+      <p>View your player profile.</p>
+      <a href="#profile">Open Profile →</a>
+    </div>
+    <div class="card" id="friends">
+      <h3>👥 Friends</h3>
+      <p>Find friends and connect.</p>
+      <a href="#friends">View Friends →</a>
+    </div>
+    <div class="card" id="avatar">
+      <h3>🎭 Avatar</h3>
+      <p>Explore your avatar.</p>
+      <a href="#avatar">View Avatar →</a>
+    </div>
+    <div class="card" id="inventory">
+      <h3>🎒 Inventory</h3>
+      <p>See your items.</p>
+      <a href="#inventory">View Inventory →</a>
+    </div>
+    <div class="card" id="communities">
+      <h3>🌐 Communities</h3>
+      <p>Discover communities.</p>
+      <a href="#communities">Explore →</a>
+    </div>
+    <div class="card" id="donate">
+      <h3>💎 Donate & Rewards</h3>
+      <p>Discover rewards and donations.</p>
+      <a href="#donate">Explore →</a>
+    </div>
+    <div class="card" id="messages">
+      <h3>✉ Messages</h3>
+      <p>Your messages will appear here.</p>
+      <a href="#messages">Open Messages →</a>
+    </div>
+    <div class="card" id="plus">
+      <h3>⭐ Rovolox Plus</h3>
+      <p>Discover membership features.</p>
+      <a href="#plus">Learn More →</a>
+    </div>
+    <div class="card" id="trade">
+      <h3>🔄 Trade</h3>
+      <p>Trading features coming soon.</p>
+      <a href="#trade">Explore →</a>
+    </div>
+  </div>
+  <footer>ROVOLOX © 2026 · All rights reserved.</footer>
+</main>
+</div>
+</body>
+</html>
